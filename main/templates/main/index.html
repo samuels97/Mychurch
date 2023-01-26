@@ -41,17 +41,17 @@
           </form>
           <div class="collapse navbar-collapse text-center order-lg-2 order-4" id="navigation">
             <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
-              <li class="nav-item"> <a class="nav-link" href="about.html">About Me</a>
+              <li class="nav-item"> <a class="nav-link" href="{% url 'main:about' %}">About Me</a>
               </li>
               <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Articles
                 </a>
-                <div class="dropdown-menu"> <a class="dropdown-item" href="travel.html">Travel</a>
-                  <a class="dropdown-item" href="travel.html">Lifestyle</a>
-                  <a class="dropdown-item" href="travel.html">Cruises</a>
+                <div class="dropdown-menu"> <a class="dropdown-item" href="{% url 'main:travel' %}">Travel</a>
+                  <a class="dropdown-item" href="{% url 'main:travel' %}">Lifestyle</a>
+                  <a class="dropdown-item" href="{% url 'main:travel' %}">Cruises</a>
                 </div>
               </li>
-              <li class="nav-item"> <a class="nav-link" href="contact.html">Contact</a>
+              <li class="nav-item"> <a class="nav-link" href="{% url 'main:about' %}">Contact</a>
               </li>
             </ul>
           </div>
@@ -84,17 +84,17 @@
                           <a href="#!">news</a>
                         </li>
                       </ul>
-                      <h2 class="h1"><a class="post-title" href="article.html">Is it Ethical to Travel Now?
+                      <h2 class="h1"><a class="post-title" href="{% url 'main:article' %}">Is it Ethical to Travel Now?
                           With that Freedom Comes Responsibility.</a></h2>
                       <p class="card-text">Heading Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for heading 1 and use ###### for heading 6.</p>
-                      <div class="content"> <a class="read-more-btn" href="article.html">Read Full Article</a>
+                      <div class="content"> <a class="read-more-btn" href="{% url 'main:article' %}">Read Full Article</a>
                       </div>
                     </div>
                   </article>
                 </div>
                 <div class="col-md-6 mb-4">
                   <article class="card article-card article-card-sm h-100">
-                    <a href="article.html">
+                    <a href="{% url 'main:article' %}">
                       <div class="card-image">
                         <div class="post-info"> <span class="text-uppercase">03 Jun 2021</span>
                           <span class="text-uppercase">2 minutes read</span>
@@ -107,17 +107,17 @@
                         <li> <a href="#!">travel</a>
                         </li>
                       </ul>
-                      <h2><a class="post-title" href="article.html">An
+                      <h2><a class="post-title" href="{% url 'main:article' %}">An
                           Experiential Guide to Explore This Kingdom</a></h2>
                       <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna …</p>
-                      <div class="content"> <a class="read-more-btn" href="article.html">Read Full Article</a>
+                      <div class="content"> <a class="read-more-btn" href="{% url 'main:article' %}">Read Full Article</a>
                       </div>
                     </div>
                   </article>
                 </div>
                 <div class="col-md-6 mb-4">
                   <article class="card article-card article-card-sm h-100">
-                    <a href="article.html">
+                    <a href="{% url 'main:article' %}">
                       <div class="card-image">
                         <div class="post-info"> <span class="text-uppercase">02 Jun 2021</span>
                           <span class="text-uppercase">2 minutes read</span>
@@ -130,7 +130,7 @@
                         <li> <a href="#!">lifestyle</a>
                         </li>
                       </ul>
-                      <h2><a class="post-title" href="article.html">What
+                      <h2><a class="post-title" href="{% url 'main:article' %}">What
                           to Do in Houston: Ideas for Your Visit</a></h2>
                       <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna …</p>
                       <div class="content"> <a class="read-more-btn" href="article.html">Read Full Article</a>
@@ -140,7 +140,7 @@
                 </div>
                 <div class="col-md-6 mb-4">
                   <article class="card article-card article-card-sm h-100">
-                    <a href="article.html">
+                    <a href="{% url 'main:article' %}">
                       <div class="card-image">
                         <div class="post-info"> <span class="text-uppercase">01 Jun 2021</span>
                           <span class="text-uppercase">3 minutes read</span>
@@ -154,7 +154,7 @@
                           <a href="#!">news</a>
                         </li>
                       </ul>
-                      <h2><a class="post-title" href="article.html">Alaska
+                      <h2><a class="post-title" href="{% url 'main:article' %}">Alaska
                           Cruises Will Restart as Biden Signs New Tourism Law</a></h2>
                       <p class="card-text">Heading Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for …</p>
                       <div class="content"> <a class="read-more-btn" href="article.html">Read Full Article</a>
@@ -164,7 +164,7 @@
                 </div>
                 <div class="col-md-6 mb-4">
                   <article class="card article-card article-card-sm h-100">
-                    <a href="article.html">
+                    <a href="{% url 'main:article' %}">
                       <div class="card-image">
                         <div class="post-info"> <span class="text-uppercase">30 May 2021</span>
                           <span class="text-uppercase">3 minutes read</span>
@@ -178,17 +178,17 @@
                           <a href="#!">news</a>
                         </li>
                       </ul>
-                      <h2><a class="post-title" href="article.html">U.S.
+                      <h2><a class="post-title" href="{% url 'main:article' %}">U.S.
                           Travel Association Calls on CDC to Remove Cruise Restrictions</a></h2>
                       <p class="card-text">Heading Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for …</p>
-                      <div class="content"> <a class="read-more-btn" href="article.html">Read Full Article</a>
+                      <div class="content"> <a class="read-more-btn" href="{% url 'main:article' %}">Read Full Article</a>
                       </div>
                     </div>
                   </article>
                 </div>
                 <div class="col-md-6 mb-4">
                   <article class="card article-card article-card-sm h-100">
-                    <a href="article.html">
+                    <a href="{% url 'main:article' %}">
                       <div class="card-image">
                         <div class="post-info"> <span class="text-uppercase">29 May 2021</span>
                           <span class="text-uppercase">3 minutes read</span>
@@ -201,17 +201,17 @@
                         <li> <a href="#!">destination</a>
                         </li>
                       </ul>
-                      <h2><a class="post-title" href="article.html">Top 7 Reasons to
+                      <h2><a class="post-title" href="{% url 'main:article' %}">Top 7 Reasons to
                           Visit Denver This Summer</a></h2>
                       <p class="card-text">Heading Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for …</p>
-                      <div class="content"> <a class="read-more-btn" href="article.html">Read Full Article</a>
+                      <div class="content"> <a class="read-more-btn" href="{% url 'main:article' %}">Read Full Article</a>
                       </div>
                     </div>
                   </article>
                 </div>
                 <div class="col-md-6 mb-4">
                   <article class="card article-card article-card-sm h-100">
-                    <a href="article.html">
+                    <a href="{% url 'main:article' %}">
                       <div class="card-image">
                         <div class="post-info"> <span class="text-uppercase">28 May 2021</span>
                           <span class="text-uppercase">2 minutes read</span>
@@ -225,10 +225,10 @@
                           <a href="#!">tips</a>
                         </li>
                       </ul>
-                      <h2><a class="post-title" href="article.html">An Experiential
+                      <h2><a class="post-title" href="{% url 'main:article' %}">An Experiential
                           Guide to Explore This Kingdom</a></h2>
                       <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna …</p>
-                      <div class="content"> <a class="read-more-btn" href="article.html">Read Full Article</a>
+                      <div class="content"> <a class="read-more-btn" href="{% url 'main:article' %}">Read Full Article</a>
                       </div>
                     </div>
                   </article>
@@ -247,7 +247,7 @@
                                 </svg>
                               </a>
                             </li>
-                            <li class="page-item active "> <a href="index.html" class="page-link">
+                            <li class="page-item active "> <a href="{% url 'main:main' %}" class="page-link">
                                 1
                               </a>
                             </li>
@@ -295,34 +295,34 @@
                               <img loading="lazy" decoding="async" src="{% static 'images/post/post-9.jpg' %}" alt="Post Thumbnail" class="w-100">
                             </div>
                             <div class="card-body px-0 pb-1">
-                              <h3><a class="post-title post-title-sm" href="article.html">Portugal and France Now
+                              <h3><a class="post-title post-title-sm" href="{% url 'main:article' %}">Portugal and France Now
                                   Allow Unvaccinated Tourists</a></h3>
                               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor …</p>
-                              <div class="content"> <a class="read-more-btn" href="article.html">Read Full Article</a>
+                              <div class="content"> <a class="read-more-btn" href="{% url 'main:article' %}">Read Full Article</a>
                               </div>
                             </div>
                           </article>
-                          <a class="media align-items-center" href="article.html">
+                          <a class="media align-items-center" href="{% url 'main:article' %}">
                             <img loading="lazy" decoding="async" src="{% static 'images/post/post-2.jpg' %}" alt="Post Thumbnail" class="w-100">
                             <div class="media-body ml-3">
                               <h3 style="margin-top:-5px">These Are Making It Easier To Visit</h3>
                               <p class="mb-0 small">Heading Here is example of hedings. You can use …</p>
                             </div>
                           </a>
-                          <a class="media align-items-center" href="article.html"> <span class="image-fallback image-fallback-xs">No Image Specified</span>
+                          <a class="media align-items-center" href="{% url 'main:article' %}"> <span class="image-fallback image-fallback-xs">No Image Specified</span>
                             <div class="media-body ml-3">
                               <h3 style="margin-top:-5px">No Image specified</h3>
                               <p class="mb-0 small">Lorem ipsum dolor sit amet, consectetur adipiscing …</p>
                             </div>
                           </a>
-                          <a class="media align-items-center" href="article.html">
+                          <a class="media align-items-center" href="{% url 'main:article' %}">
                             <img loading="lazy" decoding="async" src="{% static 'images/post/post-5.jpg' %}" alt="Post Thumbnail" class="w-100">
                             <div class="media-body ml-3">
                               <h3 style="margin-top:-5px">Perfect For Fashion</h3>
                               <p class="mb-0 small">Lorem ipsum dolor sit amet, consectetur adipiscing …</p>
                             </div>
                           </a>
-                          <a class="media align-items-center" href="article.html">
+                          <a class="media align-items-center" href="{% url 'main:article' %}">
                             <img loading="lazy" decoding="async" src="{% static 'images/post/post-9.jpg' %}" alt="Post Thumbnail" class="w-100">
                             <div class="media-body ml-3">
                               <h3 style="margin-top:-5px">Record Utra Smooth Video</h3>
@@ -376,15 +376,15 @@
       <div class="container section">
         <div class="row">
           <div class="col-lg-10 mx-auto text-center">
-            <a class="d-inline-block mb-4 pb-2" href="index.html">
+            <a class="d-inline-block mb-4 pb-2" href="{% url 'main:main' %}">
               <img loading="prelaod" decoding="async" class="img-fluid" src="{% static 'images/logo-white.png' %}" alt="Reporter Hugo">
             </a>
             <ul class="p-0 d-flex navbar-footer mb-0 list-unstyled">
-              <li class="nav-item my-0"> <a class="nav-link" href="about.html">About</a></li>
-              <li class="nav-item my-0"> <a class="nav-link" href="article.html">Elements</a></li>
-              <li class="nav-item my-0"> <a class="nav-link" href="privacy-policy.html">Privacy Policy</a></li>
-              <li class="nav-item my-0"> <a class="nav-link" href="terms-conditions.html">Terms Conditions</a></li>
-              <li class="nav-item my-0"> <a class="nav-link" href="404.html">404 Page</a></li>
+              <li class="nav-item my-0"> <a class="nav-link" href="{% url 'main:about' %}">About</a></li>
+              <li class="nav-item my-0"> <a class="nav-link" href="{% url 'main:article' %}">Elements</a></li>
+              <li class="nav-item my-0"> <a class="nav-link" href="{% url 'main:privacy-policy' %}">Privacy Policy</a></li>
+              <li class="nav-item my-0"> <a class="nav-link" href="{% url 'main:terms-conditions' %}">Terms Conditions</a></li>
+              <li class="nav-item my-0"> <a class="nav-link" href="{% url 'main:404' %}">404 Page</a></li>
             </ul>
           </div>
         </div>

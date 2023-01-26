@@ -5,3 +5,6 @@ class IndexView(View):
 	template_file = 'main/index.html'
 	def get(self, request, *args, **kwargs):
 		return render(request, self.template_file, {})
+
+class AboutView(IndexView):
+    template_file = 'main/about.html'
