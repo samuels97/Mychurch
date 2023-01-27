@@ -11,4 +11,7 @@ urlpatterns = [
 	path('terms-conditions/', views.TermsConditionsView.as_view(), name="terms-conditions"),
     path('404/', views.PageNotFoundView.as_view(), name="404"),
     path('contact/', views.ContactView.as_view(), name="contact"),
+
+    # saving message from outer user
+    path('save-message/', views.ContactMessageView.as_view(), name="save-message"),
 ]
