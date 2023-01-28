@@ -1,0 +1,143 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+ <head>
+	<meta charset="utf-8">
+	<title>Reporter - HTML Blog Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+	<meta name="description" content="This is meta description">
+	<meta name="author" content="Themefisher">
+	<link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+	<link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="reporter">
+
+	<!-- # Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css2?family=Neuton:wght@700&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+	<!-- # CSS Plugins -->
+	<link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}">
+
+	<!-- # Main Style Sheet -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+  <body>
+
+    <header class="navigation">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light px-0">
+          <a class="navbar-brand order-1 py-0" href="index.html">
+            <img loading="prelaod" decoding="async" class="img-fluid" src="{% static 'images/logo.png' %}" alt="Reporter Hugo">
+          </a>
+          <div class="navbar-actions order-3 ml-0 ml-md-4">
+            <button aria-label="navbar toggler" class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"> <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <form action="#!" class="search order-lg-3 order-md-2 order-3 ml-auto">
+            <input id="search-query" name="s" type="search" placeholder="Search..." autocomplete="off">
+          </form>
+          <div class="collapse navbar-collapse text-center order-lg-2 order-4" id="navigation">
+            <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+              <li class="nav-item"> <a class="nav-link" href="{% url 'main:about' %}">About Me</a>
+              </li>
+              <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Articles
+                </a>
+                <div class="dropdown-menu"> <a class="dropdown-item" href="{% url 'main:travel' %}">Travel</a>
+                  <a class="dropdown-item" href="{% url 'main:travel' %}">Lifestyle</a>
+                  <a class="dropdown-item" href="{% url 'main:travel' %}">Cruises</a>
+                </div>
+              </li>
+              <li class="nav-item"> <a class="nav-link" href="{% url 'main:contact' %}">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+
+    {% block content %}{% endblock content %}
+
+        <footer class="bg-dark mt-5">
+      <div class="container section">
+        <div class="row">
+          <div class="col-lg-10 mx-auto text-center">
+            <a class="d-inline-block mb-4 pb-2" href="{% url 'main:main' %}">
+              <img loading="prelaod" decoding="async" class="img-fluid" src="{% static 'images/logo-white.png' %}" alt="Reporter Hugo">
+            </a>
+            <ul class="p-0 d-flex navbar-footer mb-0 list-unstyled">
+              <li class="nav-item my-0"> <a class="nav-link" href="{% url 'main:about' %}">About</a></li>
+                <!--<li class="nav-item my-0"> <a class="nav-link" href="{% url 'main:article' %}">Elements</a></li>-->
+              <li class="nav-item my-0"> <a class="nav-link" href="{% url 'main:privacy-policy' %}">Privacy Policy</a></li>
+              <li class="nav-item my-0"> <a class="nav-link" href="{% url 'main:terms-conditions' %}">Terms Conditions</a></li>
+              <!--<li class="nav-item my-0"> <a class="nav-link" href="{% url 'main:404' %}">404 Page</a></li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright bg-dark content">Designed &amp; Developed By <a href="https://themefisher.com/">Themefisher</a></div>
+    </footer>
+<!--
+    {% block javascript %}
+        <script>
+            /*
+                On submiting the form, send the POST ajax
+                request to server and after successfull submission
+                display the object.
+            */
+            $("#friend-form").submit(function (e) {
+                // preventing from page reload and default actions
+                e.preventDefault();
+                // serialize the data for sending the form data.
+                var serializedData = $(this).serialize();
+                // make POST ajax call
+                $.ajax({
+                    type: 'POST',
+                    url: "",
+                    data: serializedData,
+                    success: function (response) {
+                        // on successfull creating object
+                        // 1. clear the form.
+                        $("#friend-form").trigger('reset');
+                        // 2. focus to nickname input
+                        $("#id_nick_name").focus();
+
+                        // display the newly friend to table.
+                        var instance = JSON.parse(response["instance"]);
+                        var fields = instance[0]["fields"];
+                        $("#my_friends tbody").prepend(
+                            `<tr>
+                            <td>${fields["nick_name"]||""}</td>
+                            <td>${fields["first_name"]||""}</td>
+                            <td>${fields["last_name"]||""}</td>
+                            <td>${fields["likes"]||""}</td>
+                            <td>${fields["dob"]||""}</td>
+                            <td>${fields["lives_in"]||""}</td>
+                            </tr>`
+                        )
+                    },
+                    error: function (response) {
+                        // alert the error if any error occured
+                        alert(response["responseJSON"]["error"]);
+                    }
+                })
+            })
+        </script>
+    {% endblock javascript %}
+-->
+
+    <!-- # JS Plugins -->
+    <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}"></script>
+
+    <!-- Main Script -->
+    <script src="{% static 'js/script.js' %}"></script>
+
+
+
+  </body>
+</html>
