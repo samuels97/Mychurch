@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.views import View
-from django.urls import request
-from django.http import httpResponseRedirect
+# from django.http import httpResponseRedirect
 
 class IndexView(View):
 	template_file = 'main/index.html'
@@ -32,7 +31,7 @@ class PageNotFoundView(IndexView):
 
 # saving message from outer user
 class ContactMessageView(IndexView):
-    if request.method == 'POST':
+    def post(request):
         name = request.POST['name']
         email = request.POST['email']
         subject = request.POST['subject']
@@ -51,9 +50,3 @@ class ContactMessageView(IndexView):
                     error = "Only letters allowed in name"
             if error != "":
                 break
-
-
-
-    else:
-        template_file = 'main/index.html'
-        context = {}
